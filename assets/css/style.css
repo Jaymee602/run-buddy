@@ -1,7 +1,7 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 
@@ -10,7 +10,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-/* apply styles to <header> */
+/* header styles start */
 header {
     padding: 20px 35px;
     background-color: #39a6b2;
@@ -44,16 +44,45 @@ header nav ul {
 }
 
 header nav ul li a {
-    margin: 0 30px;
+    padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
 }
+/* header styles end */
 
+
+/* footer styles start */
+footer {
+    background: #fce138;
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer h2 {
+    color: #024e76;
+    font-size: 30px;
+    margin: 0;
+}
+
+footer div {
+    line-height: 1.5;
+    text-align: right;
+}
+
+footer a {
+    color: #024e76
+}
+/* footer styles end */
+
+/* STYLE ALL SECTION TAGS */
 section {
     padding: 60px;
 }
 
-/* Hero Style Start */
+/* hero styles start */
 .hero {
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
@@ -61,17 +90,16 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
-/* Hero Style End */
 
-/* Hero CTA Style Starts */
 .hero-cta {
     width: 35%;
     text-align: right;
     margin: 3.5%;
     color: #fff;
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 .hero-cta h2 {
@@ -79,9 +107,7 @@ section {
     font-size: 55px;
     color: #fce138;
 }
-/* Hero CTA Style Ends */
 
-/* Hero Form Style STart */
 .hero-form {
     color: #024e76;
     background-color: #fce138;
@@ -121,8 +147,29 @@ margin: 5px 0 15px 0;
     padding: 10px 20px;
     font-size: 16px;
 }
-/* Hero Form Style Ends */
+/* hero styles end */
 
+/* section title styles start */
+.section-title {
+    font-size: 48px;
+    color: #024e76;
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
+}
+
+.primary-border {
+    border-color: #fce138;
+}
+
+.secondary-border {
+    border-color: #39a6b2;
+}
+/* section title styles end */
+
+/* what we do styles start */
 .intro p {
     line-height: 1.7;
     color: #39a6b2;
@@ -131,19 +178,11 @@ margin: 5px 0 15px 0;
     margin: 0 auto;
     text-align: center;
 }
+/* what we do styles end */
 
+/* what you do styles start */
 .steps {
     background: #fce138;
-}
-
-.section-title {
-    font-size: 55px;
-    color: #024e76;
-    border-bottom: 3px solid;
-    padding-bottom: 20px;
-    text-align: center;
-    margin: 0 auto 35px auto;
-    width: 50%;
 }
 
 .step {
@@ -179,6 +218,10 @@ margin: 5px 0 15px 0;
     max-width: 100%;
 }
 
+.step-text {
+    flex: 12;
+}
+
 .step-text h4 {
     font-size: 26px;
     line-height: 1.5;
@@ -189,11 +232,9 @@ margin: 5px 0 15px 0;
     color: #39a6b2;
     font-size: 18px;
 }
+/* what you do styles end */
 
-.step-text {
-    flex: 12;
-}
-
+/* trainer styles start */
 .trainer {
     margin: 20px;
     background: #024e76;
@@ -232,9 +273,9 @@ margin: 5px 0 15px 0;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+/* trainer styles end */
 
-/* reachout style starts */
-
+/* reachout styles start */
 .contact {
     background-color: #024e76;
 }
@@ -299,35 +340,9 @@ margin: 5px 0 15px 0;
     padding: 15px 0;
     font-size: 16px;
 }
-/*reach out style ends*/
+/*reach out styles end */
 
-/* footer style starts */
-footer {
-    background: #fce138;
-    width: 100%;
-    padding: 40px 35px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-footer h2 {
-    color: #024e76;
-    font-size: 30px;
-    margin: 0;
-}
-
-footer div {
-    line-height: 1.5;
-    text-align: right;
-}
-
-footer a {
-    color: #024e76
-}
-/* footer style ends* /
-
-/* privacy policy style starts */
+/* privacy policy styles start */
 .page-title {
     color: #fce138;
     display: inline-block;
@@ -337,9 +352,9 @@ footer a {
     font-size: 42px;
     font-style: italic;
 }
-/* privacy policy style ends */
+/* privacy policy styles end */
 
-/* utility classes start*/
+/* utility classes styles start */
 .text-left {
     text-align: left;
 }
@@ -348,15 +363,118 @@ footer a {
     text-align: right;
 }
 
-.primary-border {
-    border-color: #fce138;
-}
-
-.secondary-border {
-    border-color: #39a6b2;
-}
-
 .flex-row {
     display: flex;
 }
-/* utility classes end */
+/* utility classes styles end */
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    /* this will be applied on any screen smallers than 980px */
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    footer h2, footer div {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-cta, .hero-form {
+        width: 100%;
+    }
+
+    .hero-cta {
+        text-align: center;
+    }
+
+    .section-title {
+        width: 80%;
+    }
+
+    .trainer {
+        flex: 0 70%;
+    }
+
+    .contact-info iframe {
+        flex: 1 100%;
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    /* this will be applied on any screen between 768px and 575px */
+    section {
+        padding: 30px 15px;
+    }
+
+    .step h3 {
+        flex: 1 100%;
+        text-align: center;
+    }
+
+    .step-info {
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .step-img {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .step-text {
+        flex: 100%;
+    }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    /* this will be applied on any screen smaller than 575px */
+    .hero-form button {
+        width: 100%;
+    }
+
+    .section-title {
+        width: 95%;
+    }
+
+    .intro p {
+        width: 100%;
+    }
+
+    .trainer {
+        flex: 0 100%;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info > * {
+        flex: 0 100%;
+    }
+
+    .contact-form {
+        order: 3;
+    }
+}
